@@ -60,10 +60,28 @@ nav a:hover {
   color: var(--white);
 }
 
+.hero-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-text {
+  text-align: left;
+}
+
 .hero h2,
 .page-hero h2 {
   font-size: 2.5rem;
   margin: 0 0 16px;
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  margin-bottom: 8px;
 }
 
 .hero p,
@@ -74,11 +92,40 @@ nav a:hover {
   line-height: 1.6;
 }
 
+.hero-text p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tagline {
+  color: var(--gold);
+  font-size: 1.45rem;
+  font-weight: bold;
+  margin: 0 0 18px;
+}
+
+.hero-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-mascot {
+  width: 100%;
+  max-width: 390px;
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+  border: 4px solid rgba(242, 183, 5, 0.8);
+}
+
 .button-row {
   display: flex;
   justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
+}
+
+.hero-text .button-row {
+  justify-content: flex-start;
 }
 
 .button {
@@ -140,6 +187,33 @@ footer {
   text-align: center;
   padding: 24px;
   font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2.3rem;
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+  }
+
+  .hero-mascot {
+    max-width: 320px;
+  }
+
+  .hero-text .button-row {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 600px) {
